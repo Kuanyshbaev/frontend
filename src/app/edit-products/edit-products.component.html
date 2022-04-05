@@ -1,0 +1,33 @@
+<div class="panel">
+    <button class="btn btn-primary pull-right" *ngIf="!addProduct" (click)="editProduct()">Добавить</button>
+    <div class="panel-heading">
+        Редактировать продукты
+    </div>
+    <div class="panel-body">
+        <div *ngIf="!addProduct">
+            <ul class="list-group">
+                <li class="list-group-item" *ngFor="let product of productList">
+                    <span class="badge badge-price">{{product.price}}₸</span>
+                    <p>
+                        <button class="btn btn-danger delete-product" (click)="deleteProduct(product)"><i class="icon-cross"></i></button>
+                        <a href="javascript: void(0)" (click)="editProduct(product)">
+                            <strong>{{product.name}}</strong>
+                        </a>
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div *ngIf="addProduct">
+            <div class="col-md-12">
+                <label class="control-label">Название:</label>
+                <input class="form-control" type="text" [(ngModel)]="product.name" maxlength="50">
+            </div>
+            <div class="col-md-12">
+                <label class="control-label">Цена:</label>
+                <input class="form-control" type="number" [(ngModel)]="product.price">
+            </div>
+            <button class="btn btn-success pull-right" (click)="save()">Сохранить</button>
+            <button class="btn btn-danger pull-right" (click)="cancel()">Отмена</button>
+        </div>
+    </div>
+</div>

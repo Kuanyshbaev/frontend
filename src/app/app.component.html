@@ -1,0 +1,63 @@
+<!-- Header Section Start -->
+<header id="header-wrap">
+    <!-- Header Logo and Menu Start -->
+    <div class="navbar navbar-default navbar-fixed-top affix">
+        <div class="container">
+            <div class="navbar-header">
+                <!-- start Toggle Nav For Mobiles -->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="index.html" class="navbar-brand"><img src="assets/img/logo.png" alt=""></a>
+            </div>
+
+            <!--  Start Navigation-->
+            <div class="navbar-collapse collapse" id="navigation">
+                <!-- Top Search Start -->
+                <ul class="right cart-search">
+                    <li class="cart">
+                        <a href="/order">
+                            <i class="fa fa-shopping-cart"></i>
+                            <span class="cart-count">{{productList.length}}</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="pull-right" routerLink="edit-products">Редактировать продукты</a></li>
+                </ul>
+                <!-- Top Search End -->
+            </div>
+        </div>
+    </div>
+    <!-- Header Logo and Menu End -->
+</header>
+<!-- Header Section End -->
+
+<div class="container wrapper">
+    <div class="row">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+<!-- Footer Section Start -->
+<footer>
+    <!-- Copyright Start  -->
+    <div id="copyright" style="margin-top: 30px">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>© Copyright 2022 Badcat - Designed & Developed By <a href="#">Badcat</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+</footer>
+<!-- Footer Section End -->
+
+<!-- Go To Top Link -->
+<a href="#" class="back-to-top">
+    <i class="fa fa-angle-up"></i>
+</a>

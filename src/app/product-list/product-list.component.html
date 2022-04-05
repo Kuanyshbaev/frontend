@@ -1,0 +1,13 @@
+<div class="col-md-4 product-package" *ngFor="let product of products">
+    <div class="package-rightpart">
+        <div class="package-title">
+            <h3>{{product.name}}</h3>
+        </div>
+        <div class="package-price row">
+            <div class="col-md-4 price-bold">{{product.price}}₸</div>
+            <a href="#" class="btn btn-success pull-right" *ngIf="isProductAddedToCard(product)" routerLink="/order">Перейти в корзину <i class="icon-checkmark"></i></a>
+            <a href="#" class="btn btn-common pull-right" *ngIf="!isProductAddedToCard(product)"
+               (click)="addProductToCart(product)">В корзину <i class="icon-cart"></i></a>
+        </div>
+    </div>
+</div>

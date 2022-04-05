@@ -1,0 +1,72 @@
+/* You can add global styles to this file, and also import other style files */
+@import "assets/css/bootstrap.min.css";
+@import "assets/css/carousel-slider.css";
+@import "assets/css/font-awesome.min.css";
+@import "assets/css/main.css";
+@import "assets/css/responsive.css";
+@import "assets/css/slicknav.css";
+@import "assets/fonts/iconmoon.css";
+
+.wrapper {
+    min-height: calc(100vh - 84px);
+}
+
+.wrapper .row {
+    margin-top: 100px;
+}
+
+.item-description {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.item-amount {
+    width: 250px;
+}
+.item-amount input {
+    height: 32px;
+}
+.item-amount button {
+    font-size: 32px;
+    line-height: 32px;
+    height: 32px;
+    padding: 0 10px;
+    margin: 0;
+}
+.badge-amount {
+    font-size: 16px;
+    background-color: #333942;
+    border-radius: 7px;
+    font-family: 'monospace';
+}
+.badge-price {
+    font-size: 16px;
+    background-color: #333942;
+    border-radius: 7px;
+    font-family: 'monospace';
+}
+.package-price a {
+    height: 50px;
+}
+.list-group-item p {
+    font-size: 18px;
+}
+.total-price {
+    font-weight: 600;
+    font-size: 16px;
+}
+.package-price .price-bold {
+    font-size: 20px;
+    position: absolute;
+    color: #fff;
+    font-family: 'monospace';
+    bottom: 50px;
+    left: 30px;
+}
+
+.product-package {
+    margin-top: 30px;
+}
+
+.delete-product {
+    padding: 3px 5px 0 5px;
+}

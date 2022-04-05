@@ -1,0 +1,29 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Информация о заказе</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let product of cartProducts">
+                <div class="item-description">{{product.name}}</div>
+                <span class="badge price">{{product.price}}₸</span>
+
+                <div class="input-group item-amount">
+                    <span class="input-group-addon">Количество: </span>
+                    <input type="number" class="form-control" min="0"
+                           [(ngModel)]="product.amount">
+                    <span class="input-group-btn">
+                        <button class="btn btn-danger" type="button" (click)="removeProduct(product)">&times;</button>
+                    </span>
+                </div>
+            </li>
+        </ul>
+
+        <span class="total-price">Итого к оплате: {{getProductTotalSum()}}₸</span>
+    </div>
+</div>
+
+<div class="col-md-12">
+    <button class="btn btn-danger pull" routerLink="/">На главную</button>
+    <button class="btn btn-success pull-right" routerLink="/order-confirmation">Заказать</button>
+</div>
